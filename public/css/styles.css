@@ -1,0 +1,128 @@
+/* public/css/styles.css */
+
+/* General body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #f4f4f4, #e0e0e0);
+    animation: backgroundAnimation 10s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: linear-gradient(45deg, #f4f4f4, #e0e0e0); }
+    50% { background: linear-gradient(45deg, #e0e0e0, #f4f4f4); }
+    100% { background: linear-gradient(45deg, #f4f4f4, #e0e0e0); }
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    animation: headerAnimation 5s ease-in-out infinite;
+}
+
+@keyframes headerAnimation {
+    0% { background-color: #333; }
+    50% { background-color: #555; }
+    100% { background-color: #333; }
+}
+
+/* Homepage container */
+.homepage-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 900px;
+}
+
+/* Introduction text */
+.intro-text {
+    margin-bottom: 40px;
+}
+
+.intro-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Auth container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.auth-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.auth-form p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .homepage-container {
+        padding: 10px;
+    }
+
+    .auth-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        padding: 12px 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-text p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+}
